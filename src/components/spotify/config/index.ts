@@ -17,7 +17,7 @@ export const NOW_PLAYING_CSS = (
 .now-playing-wrapper {
   display: flex;
   justify-content: center;
-  mix-blend-mode: normal; /* Cambiado a normal para evitar inversiones raras de color */
+  mix-blend-mode: normal; 
   color: #adbac7; 
 }
 
@@ -122,7 +122,7 @@ img:not([src]) {
 #progress {
   animation: progress ${duration}ms linear;
   animation-delay: -${progress}ms;
-  background-color: #2ea043; /* Verde de commits de GitHub */
+  background-color: #4493f8; 
   height: 6px;
   left: 0;
   position: absolute;

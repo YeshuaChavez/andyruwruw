@@ -202,11 +202,12 @@ img:not([src]) {
   display: flex;
   align-items: center;
   max-width: 250px;
-  background: rgb(255,255,255,.6);
+  background: rgb(20,20,20,.8);
   border-radius: .3rem;
   margin: 0rem .5rem 1rem;
   padding: .7rem;
-  border: 1px solid rgb(0,0,0,.1);
+  border: 1px solid rgb(255,255,255,.15);
+  color: #ffffff;
 }
 
 .track .details {

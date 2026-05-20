@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "vercel dev",
+    "build": "tsc",
     "lint": "eslint . --ext .ts,.tsx --fix"
   },
   "repository": {

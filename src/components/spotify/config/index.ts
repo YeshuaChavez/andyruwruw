@@ -17,9 +17,8 @@ export const NOW_PLAYING_CSS = (
 .now-playing-wrapper {
   display: flex;
   justify-content: center;
-  /* Cambiado de difference a normal para que respete los colores oscuros de GitHub */
-  mix-blend-mode: normal; 
-  color: #adbac7; /* Texto secundario GitHub Dark */
+  mix-blend-mode: normal; /* Cambiado a normal para evitar inversiones raras de color */
+  color: #adbac7; 
 }
 
 p {
@@ -28,8 +27,8 @@ p {
 }
 
 img:not([src]) {
-  background: #22272e; /* Fondo de contenedor vacío */
-  border: 1px solid #444c56; /* Borde GitHub Dark */
+  background: #22272e;
+  border: 1px solid #444c56;
   border-radius: 6px;
   content: url("data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==");
   mix-blend-mode: normal;
@@ -56,24 +55,24 @@ img:not([src]) {
   animation-delay: 0ms;
   margin: .5rem;
   text-align: center;
-  color: #adbac7;
+  color: #768390; /* Gris de subtítulos de GitHub */
 }
 
 #track {
   animation-delay: 400ms;
-  color: #f0f6fc; /* Texto principal brillante de GitHub */
+  color: #f0f6fc; /* Blanco brillante para el título de la canción en reproducción */
   font-weight: 600;
 }
 
 #artist {
   animation-delay: 500ms;
-  color: #768390; /* Texto atenuado de GitHub */
+  color: #adbac7; /* Gris claro para el artista */
 }
 
 #cover {
   animation-delay: 300ms;
   animation-name: cover-appear;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 #cover:not([src]) {
@@ -107,7 +106,7 @@ img:not([src]) {
 
 .progress-bar {
   animation-delay: 550ms;
-  border: 1px solid #444c56; /* Borde GitHub */
+  border: 1px solid #444c56;
   border-radius: 4px;
   height: 4px;
   margin: -1px;
@@ -117,13 +116,13 @@ img:not([src]) {
   position: relative;
   width: 100%;
   z-index: 0;
-  background-color: #1c2128; /* Fondo barra */
+  background-color: #1c2128;
 }
 
 #progress {
   animation: progress ${duration}ms linear;
   animation-delay: -${progress}ms;
-  background-color: #2ea043; /* Verde éxito clásico de GitHub */
+  background-color: #2ea043; /* Verde de commits de GitHub */
   height: 6px;
   left: 0;
   position: absolute;
@@ -185,7 +184,6 @@ export const TOP_PLAYED_CSS = `
 .top-played-wrapper {
   display: flex;
   justify-content: space-around;
-  color: #adbac7;
 }
 
 a {
@@ -210,17 +208,16 @@ img:not([src]) {
   display: flex;
   align-items: center;
   max-width: 250px;
-  background: #22272e; /* Fondo de las tarjetas igual al de los contenedores de GitHub */
-  border-radius: .3rem;
+  background: #22272e; /* Gris oscuro oficial de contenedores GitHub */
+  border-radius: .4rem;
   margin: 0rem .5rem 1rem;
   padding: .7rem;
-  border: 1px solid #444c56; /* Borde sutil de GitHub */
+  border: 1px solid #444c56; /* Borde GitHub */
   transition: background 0.2s ease, border-color 0.2s ease;
 }
 
-/* Efecto hover al estilo GitHub */
 .track:hover {
-  background: #2d333b;
+  background: #2d333b; /* Efecto hover sutil */
   border-color: #768390;
 }
 
@@ -244,7 +241,8 @@ img:not([src]) {
   animation-delay: 0ms;
   text-align: center;
   margin: .5rem .5rem 1rem;
-  color: #768390;
+  color: #768390; /* Títulos de las columnas en gris GitHub (all time favorites, etc) */
+  font-weight: 500;
 }
 
 .name,
@@ -257,19 +255,19 @@ img:not([src]) {
 
 .name {
   animation-delay: 400ms;
-  color: #f0f6fc; /* Nombre de la canción en blanco GitHub */
+  color: #f0f6fc !important; /* Fuerza el Blanco brillante para el nombre de la canción */
   font-weight: 600;
 }
 
 .artist {
   animation-delay: 500ms;
-  color: #768390; /* Artista en gris GitHub */
+  color: #768390 !important; /* Fuerza el Gris medio para el nombre del artista */
 }
 
 .cover {
   animation-name: cover-appear;
   animation-delay: 300ms;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 .cover:not([src]) {

@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
-    "module": "ES2015",
+    "module": "CommonJS",
     "moduleResolution": "node",
-    "target": "ES2017",
+    "target": "ES2019",
     "jsx": "react",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",
     "typeRoots": [
       "node_modules/@types",
       "./types",
